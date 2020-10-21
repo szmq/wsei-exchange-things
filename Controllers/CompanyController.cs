@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ExchangeThings.Controllers
 {
-    public class ExchangesController : Controller
+    public class CompanyController : Controller
     {
-        public IActionResult Show()
+        public IActionResult Index()
         {
             return View();
         }
