@@ -4,7 +4,11 @@
 
 <h2>Add new company</h2>
 
-@using (Html.BeginForm())
+<div id="success-alert" class="alert alert-success" style="display: none">
+    Item added successfully
+</div>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "company-form" }))
 {
     <div class="form-group">
         @Html.LabelFor(x => x.Name, "Company name")
@@ -24,4 +28,8 @@
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Add company</button>
     </div>
-} 
+}
+
+@section Scripts {
+    <script src="~/js/addNewItem.js"></script>
+}
