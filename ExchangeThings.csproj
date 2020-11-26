@@ -4,9 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Wsei.ExchangeThings.Web' " />
   <ItemGroup>
     <Folder Include="Views\Exchanges\" />
-    <Folder Include="Views\Company\" />
     <Folder Include="Entities\" />
     <Folder Include="Database\" />
   </ItemGroup>

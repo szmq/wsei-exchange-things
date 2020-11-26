@@ -1,7 +1,6 @@
-﻿using System;
-namespace ExchangeThings.Models
+﻿namespace Wsei.ExchangeThings.Web.Models
 {
-    public class CompanyModel
+    public class ItemModel
     {
         public string Name { get; set; }
         public string Description { get; set; }

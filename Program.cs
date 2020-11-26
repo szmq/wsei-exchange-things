@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace ExchangeThings
+namespace Wsei.ExchangeThings.Web
 {
     public class Program
     {

@@ -1,17 +1,16 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Wsei.ExchangeThings.Web.Database;
 
-namespace ExchangeThings
+namespace Wsei.ExchangeThings.Web
 {
     public class Startup
     {
@@ -28,7 +27,7 @@ namespace ExchangeThings
             services.AddControllersWithViews();
 
             services.AddDbContext<ExchangesDbContext>(options => options
-              .UseSqlServer(Configuration.GetConnectionString("ExchangeThings"))
+                .UseSqlServer(Configuration.GetConnectionString("ExchangeThings"))
             );
         }
 
@@ -42,10 +41,7 @@ namespace ExchangeThings
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
             }
-            app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
