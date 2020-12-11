@@ -9,7 +9,7 @@ namespace Wsei.ExchangeThings.Web.Database
             : base(options)
         {
         }
-
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=localhost,1433; Database=exchangethings;User=SA; Password=admin123!");
